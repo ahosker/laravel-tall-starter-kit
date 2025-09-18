@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace {{ namespace }};
 
 use App\Http\Requests\Store{{ class }}Request;
@@ -45,9 +47,7 @@ class {{ class }}
         $this->validateAttributes();
 
         // {{ class }} Main Action Logic Call
-        $response = (object) $this->actionLogic();
-
-        return $response;
+        return (object) $this->actionLogic();
     }
 
     // Console entrypoint
