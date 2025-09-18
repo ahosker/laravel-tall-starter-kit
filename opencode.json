@@ -1,0 +1,24 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "formatter": {
+        "lint": {
+            "command": [
+                "composer lint",
+            ],
+            "extensions": [
+                ".php"
+            ]
+        }
+    },
+    "mcp": {
+        "laravel-boost": {
+            "type": "local",
+            "command": [
+                "php",
+                "artisan",
+                "boost:mcp"
+            ],
+            "enabled": true
+        }
+    }
+}

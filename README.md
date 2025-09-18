@@ -104,7 +104,6 @@ composer test # the entire test suite...
 
 ### TODO
 - [ ] Add Tests for custom features
-- [ ] Add OpenCode Config for Boost MCP.
 - [ ] Add OpenCode Agents/Plugins/Prompts and Agents.MD
 
 ## License
