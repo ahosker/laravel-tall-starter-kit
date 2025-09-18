@@ -1,24 +1,28 @@
 # Laravel Starter Kit
 
 <p>
-    <a href="https://github.com/nunomaduro/laravel-starter-kit/actions"><img src="https://github.com/nunomaduro/laravel-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/dt/nunomaduro/laravel-starter-kit" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/v/nunomaduro/laravel-starter-kit" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/nunomaduro/laravel-starter-kit" alt="License"></a>
+    <a href="https://github.com/ahosker/laravel-tall-starter-kit/actions"><img src="https://github.com/ahosker/laravel-tall-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/dt/ahosker/laravel-tall-starter-kit" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/v/ahosker/laravel-tall-starter-kit" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/l/ahosker/laravel-tall-starter-kit" alt="License"></a>
 </p>
 
-**Laravel Starter Kit** is my strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
+**Laravel TALL Starter Kit** is fork of [nunomaduro](https://github.com/nunomaduro/laravel-starter-kit) strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
 
 Tools like **PHPStan**, **Pest**, **Rector**, **Pint**, and **Prettier** are pre-configured to be as strict as possible. E.g: 100% type and code coverage, PHPStan level max, Rector with max privatization, and more...
 
-> **Requires [PHP 8.4+](https://php.net/releases/)**.
+Modifications from upstream include:
+- TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire) by default.
+- Removed `php artisan:make action` from `NunoMaduro\Essentials` in favor of `lorisleiva/laravel-actions`.
+- Removed Commercial AI (Cursor, Junie, etc) in favor of `sst/opencode`.
+- Added `livewire/flux` (PRO) Livewire Components.
 
 ## Create Project
 
 ⚡️ Create your project using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
+composer create-project ahosker/laravel-tall-starter-kit --prefer-dist example-app
 
 cd example-app
 
@@ -28,6 +32,7 @@ npm run build
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
+php artisan flux:activate #if, you have a PRO license...
 
 php artisan serve # serve the application...
 ```
