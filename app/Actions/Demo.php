@@ -1,19 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Actions;
 
-use App\Http\Requests\StoreDemoRequest;
 use Illuminate\Console\Command;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Lorisleiva\Actions\Concerns\WithAttributes;
 
 // Note: This only exists so `lorisleiva/laravel-actions` is happy. Delete, once you create your own action.
 
-class Demo
+final class Demo
 {
     use AsAction;
     use WithAttributes;
-
 
     public string $commandSignature = 'Demo:Demo';
     // execute action as `php artisan Demo:Demo`
@@ -29,21 +29,19 @@ class Demo
     {
         return [];
     }
-    
+
     public function handle(array $attributes = []): object
     {
         $this->fill($attributes);
         $this->validateAttributes();
 
-        $response = (object) $this->actionLogic();
-
-        return $response;
+        return (object) $this->actionLogic();
     }
 
     // Console entrypoint
     public function asCommand(Command $command): int
     {
-        $response = $this->handle();
+        $this->handle();
 
         // Return Response Confirmation
         $command->info('Action: Demo Done!');
@@ -56,7 +54,7 @@ class Demo
     {
         return (object) [
             'success' => true,
-            'data' => []
+            'data' => [],
         ];
     }
 }
