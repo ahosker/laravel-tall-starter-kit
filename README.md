@@ -93,12 +93,19 @@ composer test # the entire test suite...
 - Claude AI
 - and more...
 
-## Note to self
+## Notes to Self
+
+### Keep your fork up to date with the original repo:
 1. `git fetch upstream` # get latest changes from original repo
 2. `git checkout master` # switch to your local master branch
 3.a `git merge upstream/main` # merge changes from original repo into your local master branch
 3.b. or  `git rebase upstream/main` # rebase changes from original repo into your local master branch
 4. `git push origin master` # push changes to your forked repo
+
+### TODO
+- [ ] Add Tests for custom features
+- [ ] Add OpenCode Config for Boost MCP.
+- [ ] Add OpenCode Agents/Plugins/Prompts and Agents.MD
 
 ## License
 
