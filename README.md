@@ -93,6 +93,13 @@ composer test # the entire test suite...
 - Claude AI
 - and more...
 
+## Note to self
+1. `git fetch upstream` # get latest changes from original repo
+2. `git checkout master` # switch to your local master branch
+3.a `git merge upstream/main` # merge changes from original repo into your local master branch
+3.b. or  `git rebase upstream/main` # rebase changes from original repo into your local master branch
+4. `git push origin master` # push changes to your forked repo
+
 ## License
 
 **Laravel Starter Kit** was created by **[Nuno Maduro](https://x.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
