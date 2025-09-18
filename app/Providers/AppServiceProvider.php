@@ -21,6 +21,9 @@ final class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Register the `lorisleiva/laravel-actions` commands if we are running in the console
+        if ($this->app->runningInConsole()) {
+            \Lorisleiva\Actions\Facades\Actions::registerCommands();
+        }
     }
 }

@@ -1,0 +1,83 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Requests\Store{{ class }}Request;
+use Illuminate\Console\Command;
+use Lorisleiva\Actions\Concerns\AsAction;
+use Lorisleiva\Actions\Concerns\WithAttributes;
+
+
+class {{ class }}
+{
+    use AsAction;
+    use WithAttributes;
+
+    // Command signature (kebab-case, descriptive) (e.g., "user:set-role")
+    // Adjust per action domain if needed.
+    public string $commandSignature = '{{ class }}:{{ class }}';
+    // execute action as `php artisan {{ class }}:{{ class }}`
+
+    public string $commandDescription = '{{ class }} Description';
+
+    // Unified attributes (limit to the requested fields)
+    public mixed $input_1 = null;
+    public ?string $input_2 = null;
+
+    public function authorize(): bool
+    {
+        return (new Store{{ class }}Request)->authorize();
+    }
+
+    // {{ class }} Unified Attributes, input rules.
+    public function rules(): array
+    {
+
+       $rules = (new Store{{ class }}Request)->rules();
+
+       return Arr::only($rules, ['input_1', 'input_2']);
+    }
+    
+    // Handle receives raw attributes, fills, validates, and delegates to actionLogic
+    public function handle(array $attributes = []): object
+    {
+        $this->fill($attributes);
+        $this->validateAttributes();
+
+        // {{ class }} Main Action Logic Call
+        $response = (object) $this->actionLogic();
+
+        return $response;
+    }
+
+    // Console entrypoint
+    public function asCommand(Command $command): int
+    {
+        $attributes = [
+            'input_1' => $command->ask('{{ class }} question?', '{{ class }} answer'),
+            'input_2' => $command->ask('{{ class }} question 2?', '{{ class }} answer 2'),
+        ];
+
+        $response = $this->handle($attributes);
+
+        // Return Response Confirmation
+        $command->info('Action: {{ class }} Done!');
+
+        return 0;
+    }
+
+    // Core business logic - use Unified Data.
+    private function actionLogic(): object
+    {
+        // {{ class }} Action Logic Here
+
+        $input_1 = $this->get("input_1");
+        $input_2 = $this->get("input_2");
+
+        // Return Response as object.
+        return (object) [
+            'success' => true,
+            'data' => []
+        ];
+    }
+}
