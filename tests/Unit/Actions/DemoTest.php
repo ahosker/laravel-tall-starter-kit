@@ -34,25 +34,25 @@ test('demo action logic returns expected structure', function () {
 
 test('demo action authorize method returns true', function () {
     $demo = new Demo();
-    
+
     expect($demo->authorize())->toBeTrue();
 });
 
 test('demo action rules method returns empty array', function () {
     $demo = new Demo();
-    
+
     expect($demo->rules())->toBeArray()->toBeEmpty();
 });
 
 test('demo action has correct command signature', function () {
     $demo = new Demo();
-    
+
     expect($demo->commandSignature)->toBe('Demo:Demo');
 });
 
 test('demo action has correct command description', function () {
     $demo = new Demo();
-    
+
     expect($demo->commandDescription)->toBe('Demo Description');
 });
 
