@@ -32,7 +32,10 @@ class {{ class }}
     }
 
     // {{ class }} Unified Attributes, input rules.
-    public function rules(): array
+    /**
+    * @return array<string, mixed>
+    */
+    protected function rules(): array
     {
 
        $rules = (new Store{{ class }}Request)->rules();
@@ -41,6 +44,9 @@ class {{ class }}
     }
     
     // Handle receives raw attributes, fills, validates, and delegates to actionLogic
+    /**
+    * @param array<string, mixed> $attributes
+    */
     public function handle(array $attributes = []): object
     {
         $this->fill($attributes);

@@ -25,11 +25,17 @@ final class Demo
         return true;
     }
 
-    public function rules(): array
+    /**
+    * @return array<string, mixed>
+    */
+    protected function rules(): array
     {
         return [];
     }
 
+    /**
+    * @param array<string, mixed> $attributes
+    */
     public function handle(array $attributes = []): object
     {
         $this->fill($attributes);
