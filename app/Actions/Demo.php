@@ -20,6 +20,7 @@ final class Demo
 
     public string $commandDescription = 'Demo Description';
 
+    /** @phpstan-ignore return.tooWideBool */
     public function authorize(): bool
     {
         return true;
