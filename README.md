@@ -11,6 +11,9 @@
 
 Tools like **PHPStan**, **Pest**, **Rector**, **Pint**, and **Prettier** are pre-configured to be as strict as possible. E.g: 100% type and code coverage, PHPStan level max, Rector with max privatization, and more...
 
+> **Requires [PHP 8.4+](https://php.net/releases/)**.
+
+## Differences
 Modifications from upstream include:
 - TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire) by default.
 - Removed `php artisan:make action` from `NunoMaduro\Essentials` in favor of `lorisleiva/laravel-actions`.
@@ -24,13 +27,21 @@ Modifications from upstream include:
 ```bash
 composer create-project ahosker/laravel-tall-starter-kit --prefer-dist example-app
 
+```bash
 cd example-app
 
+# Install PHP dependencies with optimized autoloader
 composer install
+
+# Install and build frontend assets
 npm install
 npm run build
+
+# Configure your environment
 cp .env.example .env
 php artisan key:generate
+
+# Run database migrations
 php artisan migrate
 php artisan flux:activate #if, you have a PRO license...
 
@@ -53,11 +64,14 @@ php artisan serve # serve the application...
 > Every single rule in these tools is customized so they are most strict as possible.
 
 ```bash
-composer lint
-composer test:lint # on ci...
+npm install playwright
+npx playwright install
 ```
 
-🧨 Check type coverage with **Pest**:
+### Verify Installation
+
+Run the test suite to ensure everything is configured correctly:
+
 ```bash
 composer test:type-coverage # 100% type coverage...
 ```
