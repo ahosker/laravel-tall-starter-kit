@@ -10,4 +10,10 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    server: {
+        cors: true,
+        hmr: {
+            host: 'localhost', // Ensures HMR connects via the forwarded localhost
+        }
+    },
 });
