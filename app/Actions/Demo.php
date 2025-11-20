@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Actions;
 
-use stdClass;
 use Illuminate\Console\Command;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Lorisleiva\Actions\Concerns\WithAttributes;
+use stdClass;
 
 // Note: This only exists so `lorisleiva/laravel-actions` is happy. Delete, once you create your own action.
 
