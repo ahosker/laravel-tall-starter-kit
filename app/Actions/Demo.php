@@ -38,12 +38,12 @@ final class Demo
     /**
      * @param  array<string, mixed>  $attributes
      */
-    public function handle(array $attributes = []): object
+    public function handle(array $attributes = []): stdClass
     {
         $this->fill($attributes);
         $this->validateAttributes();
 
-        return (object) $this->actionLogic();
+        return $this->actionLogic();
     }
 
     // Console entrypoint
