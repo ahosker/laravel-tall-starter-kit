@@ -80,13 +80,15 @@
         "lint": [
             "rector",
             "pint --parallel",
-            "npm run lint"
+            "npm run lint",
+            "npx blade-formatter \"resources/views/**/*.blade.php\" --write"
         ],
         "test:type-coverage": "pest --type-coverage --min=100",
         "test:lint": [
             "pint --parallel --test",
             "rector --dry-run",
-            "npm run test:lint"
+            "npm run test:lint",
+            "npx blade-formatter \"resources/views/**/*.blade.php\" --check"
         ],
         "test:unit": "pest --parallel --coverage --exactly=100.0",
         "test:types": "phpstan",
