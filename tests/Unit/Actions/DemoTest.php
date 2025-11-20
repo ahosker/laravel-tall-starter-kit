@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\Actions\Demo;
 use Illuminate\Console\Command;
 
-test('demo action returns success response', function () {
+test('demo action returns success response', function (): void {
     $demo = new Demo();
     $result = $demo->handle();
 
@@ -16,12 +16,11 @@ test('demo action returns success response', function () {
         ->and($result->data)->toBeArray();
 });
 
-test('demo action logic returns expected structure', function () {
+test('demo action logic returns expected structure', function (): void {
     $demo = new Demo();
 
     $reflection = new ReflectionClass($demo);
     $method = $reflection->getMethod('actionLogic');
-    $method->setAccessible(true);
 
     $result = $method->invoke($demo);
 
@@ -32,31 +31,31 @@ test('demo action logic returns expected structure', function () {
         ->and($result->data)->toBeArray();
 });
 
-test('demo action authorize method returns true', function () {
+test('demo action authorize method returns true', function (): void {
     $demo = new Demo();
 
     expect($demo->authorize())->toBeTrue();
 });
 
-test('demo action rules method returns empty array', function () {
+test('demo action rules method returns empty array', function (): void {
     $demo = new Demo();
 
     expect($demo->rules())->toBeArray()->toBeEmpty();
 });
 
-test('demo action has correct command signature', function () {
+test('demo action has correct command signature', function (): void {
     $demo = new Demo();
 
     expect($demo->commandSignature)->toBe('Demo:Demo');
 });
 
-test('demo action has correct command description', function () {
+test('demo action has correct command description', function (): void {
     $demo = new Demo();
 
     expect($demo->commandDescription)->toBe('Demo Description');
 });
 
-test('demo action handle with attributes', function () {
+test('demo action handle with attributes', function (): void {
     $demo = new Demo();
     $attributes = ['test' => 'value'];
     $result = $demo->handle($attributes);
@@ -68,7 +67,7 @@ test('demo action handle with attributes', function () {
         ->and($result->data)->toBeArray();
 });
 
-test('demo action as command returns success', function () {
+test('demo action as command returns success', function (): void {
     $demo = new Demo();
     $command = Mockery::mock(Command::class);
     $command->shouldReceive('info')->once()->with('Action: Demo Done!');

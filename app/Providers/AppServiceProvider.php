@@ -6,6 +6,7 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Lorisleiva\Actions\Facades\Actions;
 
 final class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,7 @@ final class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ($this->app->runningInConsole()) {
-            \Lorisleiva\Actions\Facades\Actions::registerCommands();
+            Actions::registerCommands();
         }
 
         $this->bootModelsDefaults();
