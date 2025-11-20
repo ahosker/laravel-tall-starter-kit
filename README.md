@@ -119,7 +119,8 @@ composer test # the entire test suite...
 2. `git checkout master` # switch to your local master branch
 3.a `git merge upstream/main` # merge changes from original repo into your local master branch
 3.b. or  `git rebase upstream/main` # rebase changes from original repo into your local master branch
-4. `git push origin master` # push changes to your forked repo
+4. `composer update` # update dependencies if needed.
+5. `git push origin master` # push changes to your forked repo
 
 ### TODO
 
