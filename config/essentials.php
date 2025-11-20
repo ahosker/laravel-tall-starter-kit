@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+use NunoMaduro\Essentials\Configurables\MakeAction;
+use NunoMaduro\Essentials\Configurables\Unguard;
+
 return [
-    NunoMaduro\Essentials\Configurables\Unguard::class => true,
-    NunoMaduro\Essentials\Configurables\MakeAction::class => false, // Disable `Essentials` Actions, we use `lorisleiva/laravel-actions`
+    Unguard::class => true,
+    MakeAction::class => false, // Disable `Essentials` Actions, we use `lorisleiva/laravel-actions`
 ];

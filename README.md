@@ -1,4 +1,11 @@
-# Laravel Starter Kit
+- Blade (this project) version: **[github.com/nunomaduro/laravel-starter-kit](https://github.com/nunomaduro/laravel-starter-kit)**
+- Inertia & React version: **[github.com/nunomaduro/laravel-starter-kit-inertia-react](https://github.com/nunomaduro/laravel-starter-kit-inertia-react)**
+
+<p align="center">
+    <a href="https://youtu.be/VhzP0XWGTC4" target="_blank">
+        <img src="/art/banner.png" alt="Overview Laravel Starter Kit" style="width:70%;">
+    </a>
+</p>
 
 <p>
     <a href="https://github.com/ahosker/laravel-tall-starter-kit/actions"><img src="https://github.com/ahosker/laravel-tall-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
@@ -32,20 +39,8 @@ composer create-project ahosker/laravel-tall-starter-kit --prefer-dist example-a
 ```bash
 cd example-app
 
-# Install PHP dependencies with optimized autoloader
-composer install
-
-# Install and build frontend assets
-npm install
-npm run build
-
-# Configure your environment
-cp .env.example .env
-php artisan key:generate
-
-# Run database migrations
-php artisan migrate
-php artisan flux:activate #if, you have a PRO license...
+# Setup project
+composer setup
 
 php artisan serve # serve the application...
 ```
