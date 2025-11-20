@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Actions;
 
+use stdClass;
 use Illuminate\Console\Command;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Lorisleiva\Actions\Concerns\WithAttributes;
@@ -57,7 +58,7 @@ final class Demo
     }
 
     // Core business logic.
-    private function actionLogic(): object
+    private function actionLogic(): stdClass
     {
         return (object) [
             'success' => true,
