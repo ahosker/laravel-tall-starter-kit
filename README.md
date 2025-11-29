@@ -1,3 +1,5 @@
+# Laravel TALL Starter Kit
+
 [![Build Status](https://github.com/ahosker/laravel-tall-starter-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/ahosker/laravel-tall-starter-kit/actions) [![Total Downloads](https://img.shields.io/packagist/dt/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit) [![Latest Stable Version](https://img.shields.io/packagist/v/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit) [![License](https://img.shields.io/packagist/l/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit)
 
 **Laravel TALL Starter Kit** is fork of [nunomaduro](https://github.com/nunomaduro/laravel-starter-kit) strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
