@@ -20,13 +20,9 @@ final class AppServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             try {
-                try {
-                    Actions::registerCommands();
-                } catch (Exception) {
-                    // Ignore if no actions to register
-                }
+                Actions::registerCommands();
             } catch (Exception $e) {
-                // Log error but continue - actions registration is not critical
+                // Log error but continue - it fails on blank action projects
                 logger()->warning('Failed to register actions commands', [
                     'error' => $e->getMessage(),
                     'trace' => $e->getTraceAsString(),
