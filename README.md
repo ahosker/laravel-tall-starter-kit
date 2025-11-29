@@ -1,18 +1,4 @@
-- Blade (this project) version: **[github.com/nunomaduro/laravel-starter-kit](https://github.com/nunomaduro/laravel-starter-kit)**
-- Inertia & React version: **[github.com/nunomaduro/laravel-starter-kit-inertia-react](https://github.com/nunomaduro/laravel-starter-kit-inertia-react)**
-
-<p align="center">
-    <a href="https://youtu.be/VhzP0XWGTC4" target="_blank">
-        <img src="/art/banner.png" alt="Overview Laravel Starter Kit" style="width:70%;">
-    </a>
-</p>
-
-<p>
-    <a href="https://github.com/ahosker/laravel-tall-starter-kit/actions"><img src="https://github.com/ahosker/laravel-tall-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/dt/ahosker/laravel-tall-starter-kit" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/v/ahosker/laravel-tall-starter-kit" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/ahosker/laravel-tall-starter-kit"><img src="https://img.shields.io/packagist/l/ahosker/laravel-tall-starter-kit" alt="License"></a>
-</p>
+[![Build Status](https://github.com/ahosker/laravel-tall-starter-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/ahosker/laravel-tall-starter-kit/actions) [![Total Downloads](https://img.shields.io/packagist/dt/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit) [![Latest Stable Version](https://img.shields.io/packagist/v/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit) [![License](https://img.shields.io/packagist/l/ahosker/laravel-tall-starter-kit)](https://packagist.org/packages/ahosker/laravel-tall-starter-kit)
 
 **Laravel TALL Starter Kit** is fork of [nunomaduro](https://github.com/nunomaduro/laravel-starter-kit) strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
 
