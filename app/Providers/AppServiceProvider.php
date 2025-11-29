@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use Exception;
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use Lorisleiva\Actions\Facades\Actions;
