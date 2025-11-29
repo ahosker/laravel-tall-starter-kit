@@ -111,22 +111,6 @@ composer test # the entire test suite...
 - Claude AI
 - and more...
 
-## Notes to Self
-
-### Keep your fork up to date with the original repo
-
-1. `git fetch upstream` # get latest changes from original repo
-2. `git checkout master` # switch to your local master branch
-3.a `git merge upstream/main` # merge changes from original repo into your local master branch
-3.b. or  `git rebase upstream/main` # rebase changes from original repo into your local master branch
-4. `composer update` # update dependencies if needed.
-5. `git push origin master` # push changes to your forked repo
-
-### TODO
-
-- [ ] Add Tests for custom features
-- [ ] Add OpenCode Agents/Plugins/Prompts and Agents.MD
-
 ## License
 
 **Laravel Starter Kit** was created by **[Nuno Maduro](https://x.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
